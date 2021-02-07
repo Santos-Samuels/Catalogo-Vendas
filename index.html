@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/produtos.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="http://kit.fontawesome.com/a076d05399.js"></script>
+
+    <title>MM Modas | Calça</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+    
+            <label class="logo"><span>MM</span>Modas</label>
+            <ul>
+                <li><a class="active" href="index.html">Início</a></li>
+                <li><a href="">Acessórios</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        
+        <section class="hero">
+            <div class="search">
+                <form id="formSearch">
+                    <input type="search" placeholder="O QUE DESEJA VESTIR HOJE?" name="inputSearch" id="inputSearch">
+
+                    <select name="categoryOptions" id="categoryOptions" onchange="loadCategory(this)">
+                        <option value="Oferta">Oferta</option>
+                        <option value="Calça">Calça</option>
+                        <option value="Camisa">Camisa</option>
+                        <option value="Short">Short</option>
+                    </select>
+                </form>               
+            </div>
+        </section>
+    </header>
+    
+    <section id="container">
+        <h1>Oferta</h1>
+        <p>Faça a sua melhor escolha!</p>
+    
+        <div class="content" id="product-div"></div>
+    </section>
+
+    <div class="modal hide">
+        <form class="modal-form" id="product-form">
+            <div class="form-group">
+                <label for="category">Categoria</label>
+                <input type="text" name="category" id="category" class="form-control" placeholder="Ex: Calça" required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="title">Produto</label>
+                <input type="text" name="title" id="title" class="form-control" placeholder="Ex: Calça Jeans Vermelha" required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantidade</label>
+                <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Ex: 3" required="required" min="1">
+            </div>
+
+            <div class="form-group">
+                <label for="size">Tamanho</label>
+                <input type="number" name="size" id="size" class="form-control" placeholder="Ex: 38" required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="customer">Seu nome</label>
+                <input type="text" name="customer" id="customer" class="form-control" placeholder="Ex: Maria Santos" required="required">
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn-cancel" onclick="modalTrigger()">CANCELAR</button>
+                <button type="submit" class="btn-send">ENVIAR</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script/listaProdutos.js"></script>
+    <script src="script/app.js"></script>
+</body>
+</html>

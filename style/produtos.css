@@ -1,0 +1,148 @@
+section {
+    text-align: center;
+}
+
+section h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    color: var(--color-grafite);
+}
+
+section p {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-grafite);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+article {
+    margin: 1rem 2rem;
+    padding-bottom: 20px;
+    background: var(--color-cinza);
+    border-radius: 5px;
+    width: 250px;
+
+    box-shadow: 2px 2px 5px var(--color-cinza-escuro);
+}
+
+article img {
+    width: 250px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+article p {
+    font-size: 16px;
+    padding-bottom: 2px;
+}
+
+article h3 {
+    font-size: 18px;
+}
+
+article strong {
+    font-size: 20px;
+    color: var(--color-tomate);
+}
+
+article button {
+    background: var(--color-cinza-escuro);
+    width: 50%;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 5px;
+    
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    transform: .5s;
+    box-shadow: 1px 1px 2px var(--color-grafite);
+}
+
+article button:hover {
+    background: var(--color-tomate);
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    width: 70%;
+    left: 15%;
+    top: 20%;
+    background: var(--color-cinza);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px var(--color-grafite);
+}
+
+/* Form Product */
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-control {
+    padding: 10PX;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 2px var(--color-grafite);
+}
+
+.button-group {
+    text-align: center;
+}
+
+.btn-send {
+    color: var(--color-cinza);
+    background: green;
+    transform: 5s;
+}
+
+.btn-send:hover {
+    background: darkgreen;
+}
+
+.btn-cancel {
+    color: var(--color-cinza);
+    background: red;
+}
+
+.btn-cancel:hover {
+    background: darkred;
+}
+
+.hide {
+    display: none;
+    
+}
+
+@media (max-width: 952px) {
+    article, article {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section h1 {
+        font-size: 40px;
+    }
+
+    section p {
+        font-size: 20px;
+    }
+}
